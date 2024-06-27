@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            padding: 5px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    
+    
+    </style>
+</head>
+<body>
+    
+    <h1>Calculadora de Esfera</h1>
+    <label for="raio">Raio da Esfera:</label>
+    <input type="number" id="raio">
+    <button onclick="calcularEsfera()">Calcular</button>
+    <script>
+        function calcularEsfera() {
+            // Coletando o valor do raio do usuário
+            const raio = parseFloat(document.getElementById('raio').value);
+
+            // Verificando se o usuário inseriu um valor válido
+            if (isNaN(raio)) {
+                console.log("Por favor, insira um valor válido para o raio.");
+                return;
+            }
+
+            // Calculando a área de superfície e o volume da esfera
+            const areaSuperficie = 4 * Math.PI * Math.pow(raio, 2);
+            const volume = (4 / 3) * Math.PI * Math.pow(raio, 3);
+
+            // Imprimindo os resultados no console
+            console.log("Área de Superfície da Esfera:", areaSuperficie);
+            console.log("Volume da Esfera:", volume);
+        }
+    </script>
+</body>
+</html>

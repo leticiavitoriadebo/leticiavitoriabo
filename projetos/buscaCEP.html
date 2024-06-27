@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa CEP</title>
+</head>
+<style>
+    body {
+        background-color: #ffe4e1;
+        font-family: Arial, sans-serif;
+        color: #333;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        margin: 5px;
+        border: 2px solid #ff69b4;
+        border-radius: 5px;
+        width: calc(100% - 30px);
+        max-width: 400px;
+        display: block;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 5px;
+        background-color: #ff69b4;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #ff1493;
+    }
+
+    label {
+        display: block;
+        margin: 15px 0 5px;
+        font-weight: bold;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 500px;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff0f5;
+        border: 2px solid #ff69b4;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
+ <body>
+    CEP: <input type="text" id="cep">
+    <button onclick="teste();">Localizar</button>
+</body>
+<br><br>
+    <body>ENDEREÇO: <input type="text" id="logradouro"></body><br><br>
+    <body>BAIRRO:   <input type="text" id="bairro"></body><br><br>
+    <body>CIDADE:   <input type="text" id="localidade"></body><br><br>
+    <body>ESTADO:   <input type="text" id="estado"></body><br><br>
+ 
+<script src="jquery-3.7.1.min.js"> </script>
+<script>
+    function teste()
+    {
+        c = cep.value
+        c = c.replace("-","")
+        c = c.replace(".","")
+        c = c.replace(" ","")
+        
+        url = "https://viacep.com.br/ws/" + c + "/json"
+        $.getJSON(url, Preenche)
+    }
+
+    function Preenche(conteudo) 
+    {
+        if (!("erro" in conteudo)) {
+            // Este código mostra os dados na janela do console
+            // Altere este programa para preencher caixas de texto
+            // na tela ao invés de mostrar no console.
+            console.log(conteudo.logradouro);
+            console.log(conteudo.bairro);
+            console.log(conteudo.localidade);
+            console.log(conteudo.uf);
+
+        } else {
+            alert("CEP não encontrado.");
+        }
+    }
+</script>
+</html>

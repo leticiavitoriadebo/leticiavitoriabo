@@ -1,0 +1,110 @@
+:root {
+    --primary-color: hsl(200, 25%, 75%); /* Light blue as primary color */
+    --secondary-color: hsl(200, 25%, 95%); /* Light gray as secondary color */
+    --background-color: hsl(0, 0%, 95%); /* Light beige as background color */
+    --text-color: hsl(0, 0%, 20%); /* Dark gray as text color */
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+    filter: brightness(95%); /* Subtle desaturation */
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+  }
+  
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  legend {
+    width: 100%;
+    padding: 0.5rem;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+  }
+  
+  label {
+    display: flex;
+    flex-basis: 100%;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  input,
+  select,
+  textarea {
+    flex-basis: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  input:focus,
+  input:focus-within,
+  select:focus,
+  select:focus-within,
+  textarea:focus,
+  textarea:focus-within {
+    outline: none;
+    box-shadow: 0 0 2px 1px var(--primary-color);
+  }
+  
+  input:invalid,
+  input:user-invalid,
+  select:invalid,
+  select:user-invalid,
+  textarea:invalid,
+  textarea:user-invalid {
+    box-shadow: 0 0 2px 1px red;
+  }
+  
+  input[type="color"] {
+    flex-basis: auto;
+  }
+  
+  input[type="date"] {
+    padding-right: 2.5rem;
+  }
+  
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 2rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 8'%3E%3Cpath d='M1.104 4.636l6.258 3.486 6.258-3.486H1.104z' fill='%23666'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1rem;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  

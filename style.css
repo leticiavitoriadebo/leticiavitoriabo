@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+
+
+.background{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(160, 154, 255);
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 60px 1fr;
+}
+a{
+    color: rgb(0, 0, 0);
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+   
+    
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.cabeçalho-link{
+    display: flex;
+    gap: 3rem;
+    font-weight: 300;
+    cursor: pointer;  
+}
+
+.cabeçalho-link a{
+    color: #a0d5e5bb;
+    font-size: 16px;
+    padding: 6px;
+}
+
+.cabeçalho-link a:hover{
+    color:  #1d1abe;
+    transition: 0.3s all;
+    background-color: #00177c;
+    padding: 6px;
+    border-radius: 12px;
+    color: lightgray;
+}
+
+.logo i{
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: 1px solid #5ba2d1;
+    color: #170aca;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+a#contato{
+    color: #00ff15;
+    background: transparent;
+    border:solid 1px #000000;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    width: 150px;
+    font-weight: bold;
+}
+
+a#contato:hover{
+    background-color: #ececec;
+    color: #000000;
+    transition: 0.5s;
+}
+
+.container-text{
+    padding: 20px;
+    
+    grid-column: 1/2;
+    grid-row: 2/3;
+    place-self: center;
+}
+
+.text h3{
+    color: #fff;
+    font-size: 20px;
+}
+
+.text h1{
+    color: #fff;
+    margin-top: 10px;
+}
+
+.text span{
+    color: #170dad; 
+}
+
+.text p{
+    color: #fff;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.redes-social{
+    margin-top: 10px;
+}
+
+.redes-social a{
+    color: #0b0eb8;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.btn{
+    margin-top: 15px;
+
+}
+
+.imgg1{
+ 
+    width: 300px;
+    height: 300px;
+    background-image: url("./perfil.jpeg");
+    background-size: cover; 
+    border-radius: 50%;
+    border-color: black;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    place-self: center;
+}
+.geral{
+    margin-top: 20px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid black;
+}
+.foto{
+    width: 294px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid black;
+}
+.img{
+    height: 100%;
+}
+.texto{
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+container-text{
+    height: 100px;
+}
+
+
+   
+@media screen and (max-width:600px){
+    .background{
+        grid-template-columns: 1fr;
+        grid-template-rows: 3;
+        
+    }
+    header{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .imgg1{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        place-self:center;
+        
+    }
+    .container-text{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        font-size: 20px;
+        
+        place-self:center;
+    }
+}
