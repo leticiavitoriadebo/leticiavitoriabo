@@ -179,9 +179,6 @@ a#contato:hover{
 container-text{
     height: 100px;
 }
-menu{
-    display: none;
-}
 @media screen and (max-width:600px){
     .background{
         grid-template-columns: 1fr;
@@ -204,12 +201,5 @@ menu{
         font-size: 20px;
         
         place-self:center;
-    }
-    .cabeçalho-link{
-        display: none;
-    }
-    .aside{
-        height: 100vh;
-        width: -webkit-fill-available;
     }
 }
