@@ -209,7 +209,9 @@ container-text{
         gap: 0rem;
     }
     .imgg1{
+        position: relative;
         width: 200px;
         height: 200px;
+        top: -58px;
     }
 }
