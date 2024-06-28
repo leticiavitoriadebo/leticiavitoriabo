@@ -208,4 +208,8 @@ container-text{
     .cabeçalho-link{
         gap: 0rem;
     }
+    .imgg1{
+        width: 200px;
+        height: 200px;
+    }
 }
