@@ -202,4 +202,10 @@ container-text{
         
         place-self:center;
     }
+    .logo{
+        display: none;
+    }
+    .cabeçalho-link{
+        gap: 0rem;
+    }
 }
