@@ -7,7 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfólio de Letícia</title>
+    <script defer>
+        function teste(){
+            const aside = document.querySelectorAll(".aside")[0]
 
+            if(aside.style.display == "none" || aside.style.display == ''){
+                aside.style.display = "block"
+            }else{
+                aside.style.display = "none"
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -44,10 +54,13 @@
                     <a href="https://www.facebook.com/profile.php?id=100053299551411"><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://x.com/leleboell"><i class="fa-brands fa-twitter"></i></a>
                     <a href="https://www.instagram.com/leticiaboell/"><i class="fa-brands fa-instagram"></i></a>
-                   
-                    
                 </div>         
             </div>
+        </div>
+        <div class="menu">
+            <button onclick="teste()">Clique aqui</button>
+            <aside class="aside web">
+            </aside>
         </div>
     </div>
 
