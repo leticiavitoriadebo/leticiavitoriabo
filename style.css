@@ -214,4 +214,7 @@ container-text{
         height: 200px;
         top: -58px;
     }
+    .text{
+        padding-top: 604px;
+    }
 }
